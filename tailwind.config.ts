@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      boxShadow: {
+        whiteGroovy: "inset 5px 5px 7px -8px #e6e6e6",
+      },
     },
   },
   plugins: [],

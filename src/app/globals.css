@@ -1,4 +1,4 @@
-@tailwind base;
+/* @tailwind base; */
 @tailwind components;
 @tailwind utilities;
 
@@ -9,13 +9,37 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #1b1b1b;
     --foreground: #ededed;
   }
+}
+
+::-webkit-scrollbar {
+  /* background-color: #000; */
+  @apply bg-background;
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-corner {
+  background-color: transparent;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: white;
 }
