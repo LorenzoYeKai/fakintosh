@@ -7,6 +7,7 @@ import Folder from "./_components/Folder";
 import File from "./_components/File";
 import { folders } from "@/folders";
 import React from "react";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -52,6 +53,7 @@ export default function RootLayout({
           ))}
         </div>
         {children}
+        <Analytics />
       </body>
     </html>
   );
