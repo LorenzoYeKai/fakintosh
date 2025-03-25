@@ -2,9 +2,10 @@
 import { useWindowStore, finderId } from "@/store/windowStore";
 import React, { useState, useRef, useLayoutEffect } from "react";
 import TrafficLightButtons from "./TrafficLightButtons";
-import { folders } from "@/folders";
+import { folders, sideBarButtons } from "@/folders";
 import Folder from "./Folder";
 import File from "./File";
+import FinderSidebarButton from "./FinderSidebarButton";
 
 type Props = {
   windowWidth: number;
@@ -21,6 +22,7 @@ const Finder = (props: Props) => {
   const finderStack = useWindowStore((state) => state.finderStack);
   const activeFinderIndex = useWindowStore((state) => state.activeFinderIndex);
   const navigateFinder = useWindowStore((state) => state.navigateFinder);
+  const setFinderPath = useWindowStore((state) => state.setFinderPath);
 
   const [position, setPosition] = useState<{ x: number; y: number }>({
     x: 0,
@@ -70,7 +72,7 @@ const Finder = (props: Props) => {
         }
       }}
     >
-      <div className="w-full h-full relative flex rounded-lg overflow-hidden">
+      <div className="w-full h-full relative flex flex-col md:flex-row rounded-lg overflow-hidden">
         <div
           className="absolute top-0 w-full h-[40px] shadow-whiteGroovy hidden md:block"
           onMouseDown={(e) => {
@@ -106,11 +108,42 @@ const Finder = (props: Props) => {
             e.preventDefault();
           }}
         ></div>
-        <div className="w-fit md:w-[15%] h-full bg-[rgb(35,35,35)] bg-opacity-[0.97] blur-lg p-4 ">
+        <div className="w-full md:w-[15%] md:h-full bg-[rgb(35,35,35)] bg-opacity-[0.97] blur-lg p-4 ">
           <TrafficLightButtons
             isActive={finderId !== stack[stack.length - 1]}
             handleClose={() => closeWindow(finderId)}
           />
+          <div className="hidden md:flex flex-col gap-2 mt-8">
+            <p className="text-[10px] opacity-50">Favourites</p>
+            {sideBarButtons.map((b, index) => (
+              <FinderSidebarButton
+                folder={b.folder}
+                icon={b.icon}
+                isActive={finderStack[activeFinderIndex] === b.folder}
+                onClick={() => {
+                  if (finderStack[activeFinderIndex] !== b.folder) {
+                    setFinderPath(b.folder);
+                  }
+                }}
+                key={index}
+              />
+            ))}
+          </div>
+          <div className="hidden md:flex flex-col gap-2 mt-8">
+            <p className="text-[10px] opacity-50">Locations</p>
+            <FinderSidebarButton
+              folder="Lorenzo's Fake mini"
+              icon="/images/macGlyph.png"
+              isActive={
+                finderStack[activeFinderIndex] === "Lorenzo's Fake mini"
+              }
+              onClick={() => {
+                if (finderStack[activeFinderIndex] !== "Lorenzo's Fake mini") {
+                  setFinderPath("Lorenzo's Fake mini");
+                }
+              }}
+            />
+          </div>
         </div>
         <div className="w-full md:w-[85%] h-full bg-[rgb(35,35,35)]">
           <div className="w-full h-[40px] bg-[rgb(45,45,45)] bg-opacity-[0.97] blur-lg flex items-center px-4 gap-4">

@@ -8,6 +8,14 @@ export type TFolder = {
 export const folders: {
   [key: string]: TFolder;
 } = {
+  "Lorenzo's Fake mini": [
+    {
+      type: "folder",
+      name: "Fakintosh HD",
+      id: -1,
+      icon: "/images/macintosh.png",
+    },
+  ],
   "Fakintosh HD": [
     {
       type: "folder",
@@ -147,3 +155,22 @@ export const folders: {
     },
   ],
 };
+
+export const sideBarButtons = [
+  {
+    folder: "Applications",
+    icon: "/images/appsGlyph.png",
+  },
+  {
+    folder: "music",
+    icon: "/images/musicGlyph.png",
+  },
+  {
+    folder: "movies",
+    icon: "/images/moviesGlyph.png",
+  },
+  {
+    folder: "desktop",
+    icon: "/images/desktopGlyph.png",
+  },
+];
