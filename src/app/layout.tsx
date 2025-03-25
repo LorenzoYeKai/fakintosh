@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Lorenzo's desktop",
-  description: "Explore my personal fake desktop",
+  description: "Explore my personal (fake) desktop",
 };
 
 export default function RootLayout({
