@@ -1,9 +1,8 @@
 "use client";
-import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
+import React, { useState, useRef, useLayoutEffect } from "react";
 import { useWindowStore } from "@/store/windowStore";
 import { TWindow } from "@/windows";
 import TrafficLightButtons from "./TrafficLightButtons";
-import useResize from "../useResize";
 
 type Props = {
   id: number;

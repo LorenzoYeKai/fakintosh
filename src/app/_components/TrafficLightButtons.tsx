@@ -21,6 +21,7 @@ const TrafficLightButtons = (props: Props) => {
         <img
           src="/svg/close.svg"
           className="w-full h-full opacity-0 group-hover:opacity-50"
+          alt="close"
         />
       </div>
       <div
@@ -31,6 +32,7 @@ const TrafficLightButtons = (props: Props) => {
         <img
           src="/svg/minus.svg"
           className="w-full h-full opacity-0 group-hover:opacity-50"
+          alt="min"
         />
       </div>
       <div
@@ -44,6 +46,7 @@ const TrafficLightButtons = (props: Props) => {
           style={{
             transform: "rotate(90deg)",
           }}
+          alt="max"
         />
       </div>
     </div>

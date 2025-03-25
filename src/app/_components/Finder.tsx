@@ -122,7 +122,7 @@ const Finder = (props: Props) => {
               }}
               onClick={() => navigateFinder(-1)}
             >
-              <img src="/svg/leftArrow.svg" className="w-full" />
+              <img src="/svg/leftArrow.svg" className="w-full" alt="arrow" />
             </button>
             <button
               className="flex justify-center items-center w-4 bg-transparent border-none p-0 cursor-pointer z-10"
@@ -138,11 +138,12 @@ const Finder = (props: Props) => {
                 style={{
                   transform: "rotate(180deg)",
                 }}
+                alt="arrow"
               />
             </button>
             <p className="text-xs">{finderStack[activeFinderIndex]}</p>
           </div>
-          <div className="flex flex-wrap p-4">
+          <div className="flex flex-wrap p-4 items-center">
             {(folders[finderStack[activeFinderIndex]]
               ? folders[finderStack[activeFinderIndex]]
               : []

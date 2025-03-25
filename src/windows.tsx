@@ -4,6 +4,9 @@ import Skills from "./app/_components/pages/Skills";
 import Contacts from "./app/_components/pages/Contacts";
 import Cv from "./app/_components/pages/Cv";
 import Music from "./app/_components/pages/Music";
+import MusicReadme from "./app/_components/pages/MusicReadme";
+import Video from "./app/_components/pages/Video";
+import VideoReadme from "./app/_components/pages/VideoReadme";
 
 export type TWindow = {
   name?: string;
@@ -81,5 +84,67 @@ export const windows: TWindow[] = [
       />
     ),
     // 6
+  },
+  {
+    name: "Merry-Go-Round of Life.mp3",
+    defaultWidth: "fit",
+    defaultHeight: "fit",
+    children: (
+      <Music
+        title="Merry-Go-Round of Life"
+        composer="Joe Hisaishi"
+        videoId="f7SS57LFPco"
+      />
+    ),
+    // 7
+  },
+  {
+    name: "readme.mp3",
+    defaultWidth: "40%",
+    defaultHeight: "60%",
+    children: <MusicReadme />,
+    // 8
+  },
+  {
+    name: "Engineers turn dreams into reality.mp4",
+    defaultWidth: "30%",
+    defaultHeight: "fit",
+    children: <Video videoId="gWI1d891COE" />,
+    // 9
+  },
+  {
+    name: "Running Away.mp4",
+    defaultWidth: "30%",
+    defaultHeight: "fit",
+    children: <Video videoId="Jtc-PP2GWPo" />,
+    // 10
+  },
+  {
+    name: "Do Chairs Exist?.mp4",
+    defaultWidth: "30%",
+    defaultHeight: "fit",
+    children: <Video videoId="fXW-QjBsruE" />,
+    // 11
+  },
+  {
+    name: "The transformative power of classical music.mp4",
+    defaultWidth: "30%",
+    defaultHeight: "fit",
+    children: <Video videoId="r9LCwI5iErE" />,
+    // 12
+  },
+  {
+    name: "You've been rick rolled HAHA.mp4",
+    defaultWidth: "30%",
+    defaultHeight: "fit",
+    children: <Video videoId="dQw4w9WgXcQ" />,
+    // 13
+  },
+  {
+    name: "readme.mp3",
+    defaultWidth: "40%",
+    defaultHeight: "60%",
+    children: <VideoReadme />,
+    // 14
   },
 ];

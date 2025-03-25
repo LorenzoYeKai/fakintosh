@@ -47,9 +47,10 @@ const File = (props: Props) => {
             : "2px transparent solid",
           backgroundColor: clicked ? "rgba(0,0,0,0.3)" : "transparent",
         }}
+        alt="icon"
       />
       <p
-        className="text-xs text-center font-semibold leading-3 line-clamp-2 text-ellipsis break-words max-w-[96px] py-[2px] px-1 rounded-sm "
+        className="text-xs text-center font-semibold leading-3 line-clamp-3 text-ellipsis break-words max-w-[96px] py-[2px] px-1 rounded-sm "
         style={{
           backgroundColor: clicked ? "rgb(30, 75, 190)" : "transparent",
         }}

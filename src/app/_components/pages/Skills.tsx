@@ -6,11 +6,11 @@ const Skills = () => {
       <p className="text-2xl font-bold">My skills and tools</p>
       <br />
       <p>
-        I'm a software engineer, so my skills are mostly related to coding, but
-        that doesn't mean I lack experience in other fields. Most of my
+        I&apos;m a software engineer, so my skills are mostly related to coding,
+        but that doesn&apos;t mean I lack experience in other fields. Most of my
         experience comes from building my startup. In the end, skills are just
-        tools, and I believe it's important to learn what fits best for what I
-        want to build. <br />
+        tools, and I believe it&apos;s important to learn what fits best for
+        what I want to build. <br />
         Here are my skills, in order of relevance:
       </p>
       <br />
@@ -18,6 +18,7 @@ const Skills = () => {
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png"
           className="w-6 h-6"
+          alt="ts"
         />
         <p className="text-xl font-bold">Typescript</p>
       </div>
@@ -33,6 +34,7 @@ const Skills = () => {
         <img
           src="https://img.icons8.com/fluent-systems-filled/512/FFFFFF/nextjs.png"
           className="w-6 h-6"
+          alt="next"
         />
         <p className="text-xl font-bold">Next.js</p>
       </div>
@@ -47,6 +49,7 @@ const Skills = () => {
         <img
           src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
           className="w-6 h-6"
+          alt="react"
         />
         <p className="text-xl font-bold">React.js</p>
       </div>
@@ -61,6 +64,7 @@ const Skills = () => {
         <img
           src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
           className="w-6 h-6"
+          alt="rn"
         />
         <p className="text-xl font-bold">React Native</p>
       </div>
@@ -78,6 +82,7 @@ const Skills = () => {
         <img
           src="https://images.icon-icons.com/2107/PNG/512/file_type_solidity_icon_130156.png"
           className="w-6 h-6"
+          alt="sol"
         />
         <p className="text-xl font-bold">Solidity</p>
       </div>
@@ -86,20 +91,22 @@ const Skills = () => {
         There&apos;s really not much of a choice when developing smart contracts
         on EVM-compatible blockchains.
         <br /> I&apos;ve used Solidity to develop quite a few smart contracts
-        for my startup. <br /> It's fun!
+        for my startup. <br /> It&apos;s fun!
       </p>
       <br />
       <div className="flex gap-2 items-center">
         <img
           src="https://www.citypng.com/public/uploads/preview/hd-white-storage-host-clouds-icon-png-7017516950392613uoyg9we5l.png?v=2025012103"
           className="w-6 h-6"
+          alt="cloud"
         />
         <p className="text-xl font-bold">Cloud providers</p>
       </div>
       <br />
       <p>
-        I've tried quite a few cloud providers, so it doesn&apos;t make sense to
-        write a full paragraph on each one. Here&apos;s a quick rundown:
+        I&apos;ve tried quite a few cloud providers, so it doesn&apos;t make
+        sense to write a full paragraph on each one. Here&apos;s a quick
+        rundown:
         <br />
         <strong>
           <a href="https://cloud.google.com/" target="_blank">
@@ -107,7 +114,7 @@ const Skills = () => {
           </a>
         </strong>
         : My startup&apos;s entire infrastructure is hosted on GCP. Honestly,
-        while it's a decent product overall, I chose it mainly because we
+        while it&apos;s a decent product overall, I chose it mainly because we
         received $100K in credits. Otherwise, it wouldn&apos;t be my provider of
         choice.
         <br />
@@ -137,13 +144,13 @@ const Skills = () => {
       </p>
       <br />
       <div className="flex gap-2 items-center">
-        <img src="/svg/coding.svg" className="w-6 h-6" />
+        <img src="/svg/coding.svg" className="w-6 h-6" alt="lang" />
         <p className="text-xl font-bold">Other languages</p>
       </div>
       <br />
       <p>
-        I'm always curious to learn new languages and their applications. Here
-        are some languages I use less frequently:
+        I&apos;m always curious to learn new languages and their applications.
+        Here are some languages I use less frequently:
         <br />
         <strong>Python</strong>: It&apos;s hard to hate Python. I mainly use it
         for scripting (e.g. downloading music from YouTube... maybe I
@@ -165,13 +172,13 @@ const Skills = () => {
       </p>
       <br />
       <div className="flex gap-2 items-center">
-        <img src="/svg/languages.svg" className="w-6 h-6" />
+        <img src="/svg/languages.svg" className="w-6 h-6" alt="lang2" />
         <p className="text-xl font-bold">Spoken languages</p>
       </div>
       <br />
       <p>
-        I was born and raised in Italy by Chinese parents, so I'm lucky to be
-        able to speak three languages:
+        I was born and raised in Italy by Chinese parents, so I&apos;m lucky to
+        be able to speak three languages:
         <br />
         <strong>🇮🇹 Italian (native)</strong>
         <br />
@@ -181,7 +188,7 @@ const Skills = () => {
       </p>
       <br />
       <div className="flex gap-2 items-center">
-        <img src="/svg/softskill.svg" className="w-6 h-6" />
+        <img src="/svg/softskill.svg" className="w-6 h-6" alt="soft" />
         <p className="text-xl font-bold">Soft skills</p>
       </div>
       <br />
@@ -189,8 +196,9 @@ const Skills = () => {
         Unlike hard skills, soft skills are hard (pun not intended... or is it?)
         to measure.
         <br />
-        We all list things like "excellent communicator," "team player," and
-        "fast learner" on our resumes.
+        We all list things like &quote;excellent communicator,&quote;
+        &quote;team player,&quote; and &quote;fast learner&quote; on our
+        resumes.
         <br /> Of course, these skills are crucial, but they can only be truly
         demonstrated by actually working together.
       </p>
