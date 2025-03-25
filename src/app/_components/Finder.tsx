@@ -1,12 +1,19 @@
 "use client";
 import { useWindowStore, finderId } from "@/store/windowStore";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useLayoutEffect } from "react";
 import TrafficLightButtons from "./TrafficLightButtons";
 import { folders } from "@/folders";
 import Folder from "./Folder";
 import File from "./File";
 
-const Finder = () => {
+type Props = {
+  windowWidth: number;
+  windowHeight: number;
+};
+
+const Finder = (props: Props) => {
+  const { windowWidth, windowHeight } = props;
+
   const activateWindow = useWindowStore((state) => state.activateWindow);
   const closeWindow = useWindowStore((state) => state.closeWindow);
 
@@ -15,10 +22,12 @@ const Finder = () => {
   const activeFinderIndex = useWindowStore((state) => state.activeFinderIndex);
   const navigateFinder = useWindowStore((state) => state.navigateFinder);
 
-  const [position, setPosition] = useState({
-    x: 100,
-    y: 20,
+  const [position, setPosition] = useState<{ x: number; y: number }>({
+    x: 0,
+    y: 0,
   });
+
+  const [rendered, setRedered] = useState(false);
 
   const [dragging, setDragging] = useState(false);
 
@@ -26,15 +35,33 @@ const Finder = () => {
 
   const ref = useRef<HTMLDivElement>(null);
 
+  useLayoutEffect(() => {
+    setRedered(true);
+    if (ref.current) {
+      setPosition({
+        x: Math.round(windowWidth / 2) - ref.current.clientWidth / 2,
+        y: Math.round(windowHeight / 2) - ref.current.clientHeight / 2,
+      });
+    }
+  }, [windowWidth, windowHeight, ref]);
+
   if (!stack.includes(finderId)) return null;
 
   return (
     <div
-      className="absolute w-1/2 h-2/3 shadow-lg"
+      className="absolute w-full h-full md:w-1/2 md:h-2/3 shadow-lg"
       style={{
-        left: position.x,
-        top: position.y,
+        left:
+          windowWidth <= 768 || windowWidth / windowHeight <= 0.8
+            ? 0
+            : position?.x,
+        top:
+          windowWidth <= 768 || windowWidth / windowHeight <= 0.8
+            ? 20
+            : position?.y,
         zIndex: stack.indexOf(finderId) + 10,
+        display: rendered ? " block" : "none",
+        maxHeight: "calc(100svh - 20px)",
       }}
       ref={ref}
       onClick={() => {
@@ -45,7 +72,7 @@ const Finder = () => {
     >
       <div className="w-full h-full relative flex rounded-lg overflow-hidden">
         <div
-          className="absolute top-0 w-full h-[40px] shadow-whiteGroovy"
+          className="absolute top-0 w-full h-[40px] shadow-whiteGroovy hidden md:block"
           onMouseDown={(e) => {
             if (finderId !== stack[stack.length - 1]) {
               activateWindow(finderId);
@@ -79,19 +106,19 @@ const Finder = () => {
             e.preventDefault();
           }}
         ></div>
-        <div className="w-[15%] h-full bg-[rgb(35,35,35)] bg-opacity-[0.97] blur-lg p-4 ">
+        <div className="w-fit md:w-[15%] h-full bg-[rgb(35,35,35)] bg-opacity-[0.97] blur-lg p-4 ">
           <TrafficLightButtons
             isActive={finderId !== stack[stack.length - 1]}
             handleClose={() => closeWindow(finderId)}
           />
         </div>
-        <div className="w-[85%] h-full bg-[rgb(35,35,35)]">
+        <div className="w-full md:w-[85%] h-full bg-[rgb(35,35,35)]">
           <div className="w-full h-[40px] bg-[rgb(45,45,45)] bg-opacity-[0.97] blur-lg flex items-center px-4 gap-4">
             <button
               className="flex justify-center items-center w-4 bg-transparent border-none p-0 cursor-pointer z-10"
-              disabled={activeFinderIndex === 1}
+              disabled={activeFinderIndex === 0}
               style={{
-                opacity: activeFinderIndex === 1 ? 0.5 : 1,
+                opacity: activeFinderIndex === 0 ? 0.5 : 1,
               }}
               onClick={() => navigateFinder(-1)}
             >
@@ -115,7 +142,7 @@ const Finder = () => {
             </button>
             <p className="text-xs">{finderStack[activeFinderIndex]}</p>
           </div>
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap p-4">
             {(folders[finderStack[activeFinderIndex]]
               ? folders[finderStack[activeFinderIndex]]
               : []

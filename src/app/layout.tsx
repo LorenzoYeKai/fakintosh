@@ -39,7 +39,7 @@ export default function RootLayout({
         }}
       >
         <Navbar />
-        <div className="p-2 flex flex-col items-end">
+        <div className="p-2 flex flex-wrap gap-4 md:flex-col md:items-end">
           <Folder name="Fakintosh HD" icon="/images/macintosh.png" id={-1} />
           {folders["desktop"].map((file, index) => (
             <React.Fragment key={index}>

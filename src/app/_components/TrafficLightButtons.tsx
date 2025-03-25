@@ -10,7 +10,7 @@ const TrafficLightButtons = (props: Props) => {
   return (
     <div className="flex gap-2 items-center w-fit group z-10">
       <div
-        className={`w-3 h-3 rounded-full ${
+        className={`w-5 md:w-3 h-5 md:h-3 rounded-full ${
           isActive ? "bg-[rgb(155,155,155)]" : "bg-[#FF605C]"
         } group-hover:bg-[#FF605C] flex justify-center items-center`}
         onClick={(e) => {
@@ -24,7 +24,7 @@ const TrafficLightButtons = (props: Props) => {
         />
       </div>
       <div
-        className={`w-3 h-3 rounded-full ${
+        className={`w-5 md:w-3 h-5 md:h-3 rounded-full ${
           isActive ? "bg-[rgb(155,155,155)]" : "bg-[#FFBD44]"
         } group-hover:bg-[#FFBD44] flex justify-center items-center`}
       >
@@ -34,7 +34,7 @@ const TrafficLightButtons = (props: Props) => {
         />
       </div>
       <div
-        className={`w-3 h-3 rounded-full ${
+        className={`w-5 md:w-3 h-5 md:h-3 rounded-full ${
           isActive ? "bg-[rgb(155,155,155)]" : "bg-[#00CA4E]"
         } group-hover:bg-[#00CA4E] flex justify-center items-center`}
       >

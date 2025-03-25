@@ -32,10 +32,11 @@ const File = (props: Props) => {
 
   return (
     <div
-      className="flex flex-col justify-center items-center gap-[2px] cursor-pointer  w-[96px] h-[96px]"
+      className="flex flex-col justify-center items-center gap-[2px] cursor-pointer w-[96px]"
       onClick={() => setClicked(true)}
       onDoubleClick={() => openWindow(id)}
       ref={folderRef}
+      onTouchStart={() => openWindow(id)}
     >
       <img
         src={icon}

@@ -76,4 +76,24 @@ export const folders: {
       icon: "/images/txt.png",
     },
   ],
+  music: [
+    {
+      type: "file",
+      name: "Goldberg Variations.mp3",
+      id: 4,
+      icon: "/images/txt.png",
+    },
+    {
+      type: "file",
+      name: "Beneath the Mask.mp3",
+      id: 5,
+      icon: "/images/txt.png",
+    },
+    {
+      type: "file",
+      name: "Littleroot Town.mp3",
+      id: 6,
+      icon: "/images/txt.png",
+    },
+  ],
 };

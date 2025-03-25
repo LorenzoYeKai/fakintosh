@@ -36,6 +36,7 @@ const Folder = (props: Props) => {
       className="flex flex-col justify-center items-center gap-[2px] cursor-pointer w-[96px] h-[96px]"
       onClick={() => setClicked(true)}
       onDoubleClick={() => setFinderPath(name)}
+      onTouchStart={() => setFinderPath(name)}
       ref={folderRef}
     >
       <img
