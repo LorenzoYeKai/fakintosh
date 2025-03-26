@@ -3,6 +3,7 @@ export type TFolder = {
   id: number;
   name: string;
   icon: string;
+  link?: string;
 }[];
 
 export const folders: {
@@ -152,6 +153,15 @@ export const folders: {
       name: "readme.md",
       id: 14,
       icon: "/images/defaultFile.png",
+    },
+  ],
+  Applications: [
+    {
+      type: "file",
+      name: "ninfa.app",
+      id: -2,
+      icon: "/images/ninfa.jpg",
+      link: "https://ninfa.io",
     },
   ],
 };

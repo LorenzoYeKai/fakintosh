@@ -45,7 +45,12 @@ export default function RootLayout({
           {folders["desktop"].map((file, index) => (
             <React.Fragment key={index}>
               {file.type === "file" ? (
-                <File name={file.name} icon={file.icon} id={file.id} />
+                <File
+                  name={file.name}
+                  icon={file.icon}
+                  id={file.id}
+                  link={file.link}
+                />
               ) : (
                 <Folder name={file.name} icon={file.icon} id={file.id} />
               )}

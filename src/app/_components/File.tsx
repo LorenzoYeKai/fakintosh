@@ -6,10 +6,16 @@ type Props = {
   id: number;
   name?: string;
   icon?: string;
+  link?: string;
 };
 
 const File = (props: Props) => {
-  const { id, name = "untitled file.txt", icon = "/images/txt.png" } = props;
+  const {
+    id,
+    name = "untitled file.txt",
+    icon = "/images/txt.png",
+    link,
+  } = props;
   const [clicked, setClicked] = useState(false);
   const folderRef = useRef<HTMLDivElement>(null);
   const openWindow = useWindowStore((state) => state.openWindow);
@@ -34,9 +40,21 @@ const File = (props: Props) => {
     <div
       className="flex flex-col justify-center items-center gap-[2px] cursor-pointer w-[96px]"
       onClick={() => setClicked(true)}
-      onDoubleClick={() => openWindow(id)}
+      onDoubleClick={() => {
+        if (link) {
+          window.open(link, "_blank");
+          return;
+        }
+        openWindow(id);
+      }}
       ref={folderRef}
-      onTouchStart={() => openWindow(id)}
+      onTouchStart={() => {
+        if (link) {
+          window.open(link, "_blank");
+          return;
+        }
+        openWindow(id);
+      }}
     >
       <img
         src={icon}
