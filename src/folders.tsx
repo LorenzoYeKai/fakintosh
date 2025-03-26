@@ -163,6 +163,12 @@ export const folders: {
       icon: "/images/ninfa.jpg",
       link: "https://ninfa.io",
     },
+    {
+      type: "file",
+      name: "game of life.app",
+      id: 15,
+      icon: "/images/gof.png",
+    },
   ],
 };
 

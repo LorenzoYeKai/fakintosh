@@ -7,6 +7,7 @@ import Music from "./app/_components/pages/Music";
 import MusicReadme from "./app/_components/pages/MusicReadme";
 import Video from "./app/_components/pages/Video";
 import VideoReadme from "./app/_components/pages/VideoReadme";
+import GameOfLife from "./app/_components/pages/GameOfLife";
 
 export type TWindow = {
   name?: string;
@@ -146,5 +147,12 @@ export const windows: TWindow[] = [
     defaultHeight: "60%",
     children: <VideoReadme />,
     // 14
+  },
+  {
+    name: "game of life.app",
+    defaultWidth: "fit",
+    defaultHeight: "60%",
+    children: <GameOfLife />,
+    // 15
   },
 ];
