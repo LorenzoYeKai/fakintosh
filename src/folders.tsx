@@ -61,6 +61,12 @@ export const folders: {
   ],
   desktop: [
     {
+      type: "folder",
+      name: "projects",
+      id: -1,
+      icon: "/images/folder.png",
+    },
+    {
       type: "file",
       name: "cv.pdf",
       id: 0,
@@ -158,16 +164,62 @@ export const folders: {
   Applications: [
     {
       type: "file",
-      name: "ninfa.app",
-      id: -2,
-      icon: "/images/ninfa.jpg",
-      link: "https://ninfa.io",
-    },
-    {
-      type: "file",
       name: "game of life.app",
       id: 15,
       icon: "/images/gof.png",
+    },
+  ],
+  projects: [
+    {
+      type: "file",
+      name: "ninfa.io",
+      id: -2,
+      icon: "/images/ninfa.png",
+      link: "https://ninfa.io",
+    },
+    {
+      type: "folder",
+      name: "graveyard",
+      id: -1,
+      icon: "/images/rip.png",
+    },
+  ],
+  graveyard: [
+    {
+      type: "file",
+      name: "readme.md",
+      id: 20,
+      icon: "/images/defaultFile.png",
+    },
+    {
+      type: "file",
+      name: "Anime Song Quiz",
+      id: 17,
+      icon: "/images/asq.png",
+    },
+    {
+      type: "file",
+      name: "Calcisticamente Parlando",
+      id: 16,
+      icon: "/images/calc.png",
+    },
+    {
+      type: "file",
+      name: "Save The Day",
+      id: 18,
+      icon: "/images/std.png",
+    },
+    {
+      type: "file",
+      name: "RepBase",
+      id: 21,
+      icon: "/images/repchan.jpeg",
+    },
+    {
+      type: "file",
+      name: "Tanuki Pay",
+      id: 19,
+      icon: "/images/tanuki.png",
     },
   ],
 };

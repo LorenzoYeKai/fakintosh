@@ -8,6 +8,12 @@ import MusicReadme from "./app/_components/pages/MusicReadme";
 import Video from "./app/_components/pages/Video";
 import VideoReadme from "./app/_components/pages/VideoReadme";
 import GameOfLife from "./app/_components/pages/GameOfLife";
+import Calc from "./app/_components/pages/Calc";
+import Asq from "./app/_components/pages/Asq";
+import Tanuki from "./app/_components/pages/Tanuki";
+import Std from "./app/_components/pages/Std";
+import GraveyardReadme from "./app/_components/pages/GraveyardReadme";
+import RepBase from "./app/_components/pages/RepBase";
 
 export type TWindow = {
   name?: string;
@@ -154,5 +160,47 @@ export const windows: TWindow[] = [
     defaultHeight: "60%",
     children: <GameOfLife />,
     // 15
+  },
+  {
+    name: "Calcisticamente Parlando",
+    defaultWidth: "40%",
+    defaultHeight: "60%",
+    children: <Calc />,
+    // 16
+  },
+  {
+    name: "Anime Song Quiz",
+    defaultWidth: "40%",
+    defaultHeight: "60%",
+    children: <Asq />,
+    // 17
+  },
+  {
+    name: "Save The Day",
+    defaultWidth: "40%",
+    defaultHeight: "60%",
+    children: <Std />,
+    // 18
+  },
+  {
+    name: "Tanuki Pay",
+    defaultWidth: "40%",
+    defaultHeight: "60%",
+    children: <Tanuki />,
+    // 19
+  },
+  {
+    name: "readme.md",
+    defaultWidth: "40%",
+    defaultHeight: "60%",
+    children: <GraveyardReadme />,
+    // 20
+  },
+  {
+    name: "RepBase",
+    defaultWidth: "40%",
+    defaultHeight: "60%",
+    children: <RepBase />,
+    // 21
   },
 ];

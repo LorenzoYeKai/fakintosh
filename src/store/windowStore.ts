@@ -52,6 +52,9 @@ export const useWindowStore = create<WindowState & WindowActions>((set) => ({
     }),
   setFinderPath: (path: string) =>
     set((p) => {
+      if (p.finderStack[p.activeFinderIndex] === path) {
+        return p;
+      }
       var newStack: WindowState["stack"] = p.stack;
       var newFinderStack: WindowState["finderStack"] = [...p.finderStack, path];
       if (p.stack.includes(finderId)) {

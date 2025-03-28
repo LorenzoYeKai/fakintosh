@@ -7,7 +7,7 @@ const MusicReadme = () => {
       <br />
       <p>
         Here you can find some of my favorite pieces from every
-        &quote;genre&quote; of music I like.
+        &quot;genre&quot; of music I like.
       </p>
       <br />
       <p className="text-xl font-bold">

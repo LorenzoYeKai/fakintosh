@@ -196,9 +196,8 @@ const Skills = () => {
         Unlike hard skills, soft skills are hard (pun not intended... or is it?)
         to measure.
         <br />
-        We all list things like &quote;excellent communicator,&quote;
-        &quote;team player,&quote; and &quote;fast learner&quote; on our
-        resumes.
+        We all list things like &quot;excellent communicator,&quot; &quot;team
+        player,&quot; and &quot;fast learner&quot; on our resumes.
         <br /> Of course, these skills are crucial, but they can only be truly
         demonstrated by actually working together.
       </p>
