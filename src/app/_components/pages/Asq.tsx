@@ -57,15 +57,14 @@ const Asq = () => {
         <br />
         <br />
         The app actually did okay, <strong>2000+ downloads</strong>. So, I
-        decided to develop an
-        <strong>iOS version</strong> using <strong>Swift</strong>. Not so hard,
-        just learn an entire new language and replicate everything. The thing
-        is, the app never got into the App Store because it is much more strict
-        than the Google Play Store about
+        decided to develop an <strong>iOS version</strong> using{" "}
+        <strong>Swift</strong>. Not so hard, just learn an entire new language
+        and replicate everything. The thing is, the app never got into the App
+        Store because it is much more strict than the Google Play Store about{" "}
         <strong>copyright</strong>. I ended up fighting with the review team
         because they kept replying with robot-like messages about the issue.
-        Apparently, 30 seconds of anime songs would do irreparable damage to the
-        Japanese music industry.
+        Apparently, 30 seconds of anime songs on an innocent mobile game would
+        do irreparable damage to the Japanese music industry.
         <br />
         <br />
         It was so much fun. My first real project that got used by people all

@@ -24,10 +24,10 @@ const Calc = () => {
         it. I thought, “I just built an app (Anime Song Quiz), it could be fun
         building another one,” so that&apos;s what I did.
         <br /> This time, it was absolutely crucial to have the app on both the
-        Google Play Store and Apple App Store, so I chose to build it using
-        <strong>React Native</strong>. At the time, it wasn&apos;t that popular
-        yet, but the benefits were clear, and unlike Flutter, it felt like home
-        to someone familiar with React.
+        Google Play Store and Apple App Store right at the beginning, so I chose
+        to build it using <strong>React Native</strong>. At the time, it
+        wasn&apos;t that popular yet, but the benefits were clear, and unlike
+        Flutter, it felt like home to someone familiar with React.
         <br /> We prototyped the app, built it, and launched it in, I think,{" "}
         <strong>two weeks</strong>. The obvious challenges were, of course, how
         to use the technologies, but here are some not-so-obvious ones: <br />
@@ -50,22 +50,21 @@ const Calc = () => {
         far the biggest challenge. All the APIs I could find were behind a
         paywall. So what I did was create a cron job on <strong>AWS</strong>{" "}
         that used <strong>Puppeteer</strong> to scrape Serie A&apos;s official
-        website every one minute and save the result on
+        website every one minute and save the result on{" "}
         <strong>DynamoDB</strong>. This approach was actually a mess because it
         wasn&apos;t actually real-time, and every time Serie A changed its
         interface, the cron job broke. But it was the best option we had. Look,
         we were two broke recent graduates. <br />
         <br />
-        The app wasn&apos;t successful, obviously, because no{" "}
-        <strong>one wanted it</strong>. It was completely useless. You could
-        listen to the podcast on every major platform, and you could watch match
-        scores live on literally every football app and on Serie A&apos;s
-        official website. There was no point for the app to exist. It was{" "}
-        <strong>fun</strong>, though, and in the end,{" "}
-        <strong>I&apos;m proud</strong>
-        of what I built. I learned new technologies and built something with
-        literally zero dollars that worked (maybe not perfectly) by thinking
-        outside the box.
+        The app wasn&apos;t successful, obviously, because, honestly{" "}
+        <strong>no one wanted it</strong>. It was completely useless. You could
+        already listen to the podcast on every major platform, and you could
+        watch match scores live on literally every football app and on Serie
+        A&apos;s official website. There was no point for the app to exist. It
+        was <strong>fun</strong>, though, and in the end,{" "}
+        <strong>I&apos;m proud</strong> of what I built. I learned new
+        technologies and built something with literally zero dollars that worked
+        (maybe not perfectly) by thinking outside the box.
       </p>
     </div>
   );
