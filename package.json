@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "pnpm build || (echo ERROR && exit 1) && git push origin main && echo SUCCESS"
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",

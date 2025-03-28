@@ -20,9 +20,9 @@ const Asq = () => {
         of our early teenage years watching anime, and{" "}
         <strong>we loved anime songs</strong>. There was one game on the App
         Store in the early iPhone era called{" "}
-        <strong>&quot;Anime Quizz&quot;</strong> (yes, with two z's) that my
-        sister and I really liked. It was a quiz game where you had to guess the
-        anime starting from a song, a character, etc. Right before my
+        <strong>&quot;Anime Quizz&quot;</strong> (yes, with two z&apos;s) that
+        my sister and I really liked. It was a quiz game where you had to guess
+        the anime starting from a song, a character, etc. Right before my
         graduation, we saw that the app was no longer available, and we thought
         it would have been nice to build a similar game ourselves. So, she did
         all the design, I wrote the code, and we both worked on the content
@@ -43,7 +43,7 @@ const Asq = () => {
         To be honest, aside from learning the tools, it wasn&apos;t very
         challenging. The most annoying part was actually creating the content.
         For the rest, it was a really simple interface; once you understood how
-        to work with XML and stuff, it's pretty easy.
+        to work with XML and stuff, it&apos;s pretty easy.
         <br />
         <br />
         At some point, we realized that <strong>
