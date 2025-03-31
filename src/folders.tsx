@@ -168,6 +168,12 @@ export const folders: {
       id: 15,
       icon: "/images/gof.png",
     },
+    {
+      type: "file",
+      name: "Epub reader.app",
+      id: 22,
+      icon: "/images/book.webp",
+    },
   ],
   projects: [
     {

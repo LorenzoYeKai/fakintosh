@@ -14,6 +14,7 @@ import Tanuki from "./app/_components/pages/Tanuki";
 import Std from "./app/_components/pages/Std";
 import GraveyardReadme from "./app/_components/pages/GraveyardReadme";
 import RepBase from "./app/_components/pages/RepBase";
+import Epub from "./app/_components/pages/Epub";
 
 export type TWindow = {
   name?: string;
@@ -202,5 +203,12 @@ export const windows: TWindow[] = [
     defaultHeight: "60%",
     children: <RepBase />,
     // 21
+  },
+  {
+    name: "Epub reader.app",
+    defaultWidth: "100%",
+    defaultHeight: "100%",
+    children: <Epub />,
+    // 22
   },
 ];
