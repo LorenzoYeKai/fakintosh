@@ -6,10 +6,15 @@ type Props = {
   id: number;
   name?: string;
   icon?: string;
+  textColor?: string;
 };
 
 const Folder = (props: Props) => {
-  const { name = "untitled folder", icon = "/images/folder.png" } = props;
+  const {
+    name = "untitled folder",
+    icon = "/images/folder.png",
+    textColor,
+  } = props;
   const [clicked, setClicked] = useState(false);
   const folderRef = useRef<HTMLDivElement>(null);
 
@@ -54,6 +59,7 @@ const Folder = (props: Props) => {
         className="text-xs text-center font-semibold leading-3 line-clamp-2 text-ellipsis break-words max-w-[96px] py-[2px] px-1 rounded-sm "
         style={{
           backgroundColor: clicked ? "rgb(30, 75, 190)" : "transparent",
+          color: clicked ? "#ffffff" : textColor,
         }}
       >
         {name}

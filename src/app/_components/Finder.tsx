@@ -108,7 +108,7 @@ const Finder = (props: Props) => {
             e.preventDefault();
           }}
         ></div>
-        <div className="w-full md:w-[15%] md:h-full bg-[rgb(35,35,35)] bg-opacity-[0.97] blur-lg p-4 ">
+        <div className="w-full md:w-[15%] md:h-full bg-dragbar bg-opacity-[0.97] blur-lg p-4 ">
           <TrafficLightButtons
             isActive={finderId !== stack[stack.length - 1]}
             handleClose={() => closeWindow(finderId)}
@@ -145,8 +145,8 @@ const Finder = (props: Props) => {
             />
           </div>
         </div>
-        <div className="w-full md:w-[85%] h-full bg-[rgb(35,35,35)]">
-          <div className="w-full h-[40px] bg-[rgb(45,45,45)] bg-opacity-[0.97] blur-lg flex items-center px-4 gap-4">
+        <div className="w-full md:w-[85%] h-full bg-dragbar">
+          <div className="w-full h-[40px] bg-windowbg bg-opacity-[0.97] blur-lg flex items-center px-4 gap-4">
             <button
               className="flex justify-center items-center w-4 bg-transparent border-none p-0 cursor-pointer z-10"
               disabled={activeFinderIndex === 0}
@@ -155,7 +155,12 @@ const Finder = (props: Props) => {
               }}
               onClick={() => navigateFinder(-1)}
             >
-              <img src="/svg/leftArrow.svg" className="w-full" alt="arrow" />
+              <img
+                src="/svg/leftArrow.svg"
+                className="w-full invert filter"
+                alt="arrow"
+                id="svg"
+              />
             </button>
             <button
               className="flex justify-center items-center w-4 bg-transparent border-none p-0 cursor-pointer z-10"
@@ -168,6 +173,7 @@ const Finder = (props: Props) => {
               <img
                 src="/svg/leftArrow.svg"
                 className="w-full"
+                id="svg"
                 style={{
                   transform: "rotate(180deg)",
                 }}

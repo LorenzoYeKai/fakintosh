@@ -55,9 +55,9 @@ const Music = (props: Props) => {
       <div className="opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto">
         {player && currentTime ? (
           <div className="flex flex-col w-[300px] gap-2">
-            <div className="h-2 w-full border-white border-[1px] border-solid rounded-full">
+            <div className="h-2 w-full border-baseColor border-[1px] border-solid rounded-full">
               <div
-                className="h-2 bg-white rounded-full"
+                className="h-2 bg-baseColor rounded-full"
                 style={{
                   width: `${(currentTime / player.getDuration()) * 100}%`,
                 }}
@@ -82,6 +82,7 @@ const Music = (props: Props) => {
                         ? "/svg/pause.svg"
                         : "/svg/play.svg"
                     }
+                    id="svg"
                     className="w-full h-full"
                     alt="ctrl"
                   />

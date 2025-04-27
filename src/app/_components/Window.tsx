@@ -77,7 +77,7 @@ const Window = (props: Props) => {
         }
       }}
     >
-      <div className="w-full h-full relative flex flex-col bg-[rgb(35,35,35)] rounded-lg overflow-hidden">
+      <div className="w-full h-full relative flex flex-col bg-dragbar rounded-lg overflow-hidden">
         <div
           className="absolute top-0 w-full h-[40px] shadow-whiteGroovy hidden md:block"
           onMouseDown={(e) => {
@@ -113,7 +113,7 @@ const Window = (props: Props) => {
             e.preventDefault();
           }}
         ></div>
-        <div className="w-full h-[40px] bg-[rgb(45,45,45)] bg-opacity-[0.97] blur-lg flex items-center justify-between">
+        <div className="w-full h-[40px] bg-windowbg bg-opacity-[0.97] blur-lg flex items-center justify-between">
           <div className="flex items-center gap-8 pl-4">
             <TrafficLightButtons
               isActive={id !== stack[stack.length - 1]}

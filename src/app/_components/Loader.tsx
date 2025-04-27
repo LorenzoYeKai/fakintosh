@@ -13,13 +13,14 @@ const Loader = (props: Props) => {
       style={{
         width: width,
         height: height,
-        border: `${thickness}px solid #FFF`,
+        border: `${thickness}px solid`,
         borderBottomColor: "transparent",
         borderRadius: "50%",
         display: "inline-block",
         boxSizing: "border-box",
         animation: "rotation 1s linear infinite",
       }}
+      className="border-baseColor"
     />
   );
 };

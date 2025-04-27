@@ -21,7 +21,11 @@ const Clock = (props: Props) => {
     return () => clearInterval(i);
   }, []);
 
-  return <p {...props}>{time}</p>;
+  return (
+    <p {...props} className="text-white">
+      {time}
+    </p>
+  );
 };
 
 export default Clock;

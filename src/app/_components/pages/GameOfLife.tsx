@@ -78,29 +78,30 @@ const GameOfLife = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full pt-4">
-      <div className="mb-4 flex gap-4">
-        <button
-          className="bg-blue-500 text-white border-none rounded-md px-4 py-2 cursor-pointer"
-          onClick={() => setIsRunning(!isRunning)}
-        >
-          {isRunning ? "pause" : "start"}
-        </button>
-        <button
-          className="bg-red-500 text-white border-none rounded-md px-4 py-2 cursor-pointer"
-          onClick={resetGame}
-        >
-          Reset
-        </button>
-      </div>
-
-      <div className="mb-4">
-        <p>Generation: {generation}</p>
-        <p>Population: {population}</p>
+    <div className="flex flex-col items-center justify-center w-full h-full relative group">
+      <div className="flex flex-col items-center absolute top-0 left-0 bg-white p-4 opacity-0 group-hover:opacity-100">
+        <div className="mb-4 flex gap-4">
+          <button
+            className="bg-blue-500 text-white border-none rounded-md px-4 py-2 cursor-pointer"
+            onClick={() => setIsRunning(!isRunning)}
+          >
+            {isRunning ? "pause" : "start"}
+          </button>
+          <button
+            className="bg-red-500 text-white border-none rounded-md px-4 py-2 cursor-pointer"
+            onClick={resetGame}
+          >
+            Reset
+          </button>
+        </div>
+        <div className="mb-4">
+          <p>Generation: {generation}</p>
+          <p>Population: {population}</p>
+        </div>
       </div>
 
       <div
-        className="grid border border-gray-300 h-full p-4"
+        className="grid border border-gray-300 aspect-square p-4"
         style={{
           gridTemplateColumns: `repeat(${gridSize}, ${cellSize}px)`,
         }}

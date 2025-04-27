@@ -158,7 +158,7 @@ export const windows: TWindow[] = [
   {
     name: "game of life.app",
     defaultWidth: "fit",
-    defaultHeight: "60%",
+    defaultHeight: "auto",
     children: <GameOfLife />,
     // 15
   },

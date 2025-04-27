@@ -11,6 +11,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        dragbar: "var(--dragbar)",
+        windowbg: "var(--windowbg)",
+        baseColor: "var(--baseColor)",
       },
       boxShadow: {
         whiteGroovy: "inset 5px 5px 7px -8px #e6e6e6",

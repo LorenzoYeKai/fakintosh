@@ -7,6 +7,7 @@ type Props = {
   name?: string;
   icon?: string;
   link?: string;
+  textColor?: string;
 };
 
 const File = (props: Props) => {
@@ -15,6 +16,7 @@ const File = (props: Props) => {
     name = "untitled file.txt",
     icon = "/images/txt.png",
     link,
+    textColor,
   } = props;
   const [clicked, setClicked] = useState(false);
   const folderRef = useRef<HTMLDivElement>(null);
@@ -71,6 +73,7 @@ const File = (props: Props) => {
         className="text-xs text-center font-semibold leading-3 line-clamp-3 text-ellipsis break-words max-w-[96px] py-[2px] px-1 rounded-sm "
         style={{
           backgroundColor: clicked ? "rgb(30, 75, 190)" : "transparent",
+          color: textColor,
         }}
       >
         {name}

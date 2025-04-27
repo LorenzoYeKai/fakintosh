@@ -41,7 +41,12 @@ export default function RootLayout({
       >
         <Navbar />
         <div className="p-2 flex flex-wrap gap-4 md:flex-col md:items-end">
-          <Folder name="Fakintosh HD" icon="/images/macintosh.png" id={-1} />
+          <Folder
+            name="Fakintosh HD"
+            icon="/images/macintosh.png"
+            id={-1}
+            textColor="#ffffff"
+          />
           {folders["desktop"].map((file, index) => (
             <React.Fragment key={index}>
               {file.type === "file" ? (
@@ -50,9 +55,15 @@ export default function RootLayout({
                   icon={file.icon}
                   id={file.id}
                   link={file.link}
+                  textColor="#ffffff"
                 />
               ) : (
-                <Folder name={file.name} icon={file.icon} id={file.id} />
+                <Folder
+                  name={file.name}
+                  icon={file.icon}
+                  id={file.id}
+                  textColor="#ffffff"
+                />
               )}
             </React.Fragment>
           ))}

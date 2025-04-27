@@ -5,12 +5,25 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --dragbar: rgb(230, 230, 230);
+  --windowbg: rgb(252, 252, 252);
+  --baseColor: #000000;
+}
+
+#svg {
+  filter: invert(100%);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #1b1b1b;
     --foreground: #ededed;
+    --dragbar: rgb(35, 35, 35);
+    --windowbg: rgb(45, 45, 45);
+    --baseColor: #ffffff;
+  }
+  #svg {
+    filter: invert(0);
   }
 }
 
@@ -21,7 +34,7 @@
   height: 5px;
 }
 ::-webkit-scrollbar-thumb {
-  background: white;
+  background: var(--baseColor);
   border-radius: 10px;
 }
 ::-webkit-scrollbar-corner {
@@ -41,7 +54,7 @@ p {
 }
 
 a {
-  color: white;
+  color: var(--baseColor);
 }
 
 @keyframes rotation {
