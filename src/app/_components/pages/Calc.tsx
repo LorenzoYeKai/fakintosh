@@ -20,9 +20,10 @@ const Calc = () => {
         In the middle of the <strong>COVID</strong> pandemic (2020/21), I
         graduated with my Bachelor&apos;s degree in computer science. <br />
         One of my best friends, who is super passionate about football, told me
-        that he had started a podcast and wanted a sort of “companion app” for
-        it. I thought, “I just built an app (Anime Song Quiz), it could be fun
-        building another one,” so that&apos;s what I did.
+        that he had started a podcast and wanted a sort of &quot;companion
+        app&quot; for it. I thought, &quot;I just built an app (Anime Song
+        Quiz), it could be fun building another one, &quot; so that &apos;s what
+        I did.
         <br /> This time, it was absolutely crucial to have the app on both the
         Google Play Store and Apple App Store right at the beginning, so I chose
         to build it using <strong>React Native</strong>. At the time, it
