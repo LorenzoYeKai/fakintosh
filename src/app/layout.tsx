@@ -34,7 +34,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased h-full w-full relative overflow-hidden`}
         style={{
-          backgroundImage: `url('./images/wallpaper.jpg')`,
+          backgroundImage: `url('./images/wallpaper.png')`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}

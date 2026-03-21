@@ -26,8 +26,8 @@ const VideoReadme = () => {
       <br />
       <p className="text-xl font-bold">Do Chairs Exist?</p>
       <p>
-        A Vsauce video. Philosophy, science, and existential confusion—all in
-        one. I miss full-length Vsauce videos.
+        A Vsauce video. Philosophy, science, and existential confusion, all in
+        one. I miss full length Vsauce videos.
       </p>
       <br />
       <p className="text-xl font-bold">
