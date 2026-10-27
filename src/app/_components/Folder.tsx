@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import { useWindowStore } from "@/store/windowStore";
+import { getFolderPath } from "@/lib/site";
 
 type Props = {
   id: number;
@@ -16,7 +17,8 @@ const Folder = (props: Props) => {
     textColor,
   } = props;
   const [clicked, setClicked] = useState(false);
-  const folderRef = useRef<HTMLDivElement>(null);
+  const folderRef = useRef<HTMLAnchorElement>(null);
+  const href = getFolderPath(name);
 
   const setFinderPath = useWindowStore((state) => state.setFinderPath);
 
@@ -37,11 +39,25 @@ const Folder = (props: Props) => {
   }, []);
 
   return (
-    <div
+    <a
+      href={href}
+      role={href ? undefined : "button"}
+      tabIndex={0}
+      style={{ textDecoration: "none", color: "inherit" }}
       className="flex flex-col justify-center items-center gap-[2px] cursor-pointer w-[96px] h-[96px]"
-      onClick={() => setClicked(true)}
+      onClick={(event) => {
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        setClicked(true);
+      }}
       onDoubleClick={() => setFinderPath(name)}
       onTouchStart={() => setFinderPath(name)}
+      onKeyDown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          setFinderPath(name);
+        }
+      }}
       ref={folderRef}
     >
       <img
@@ -53,7 +69,7 @@ const Folder = (props: Props) => {
             : "2px transparent solid",
           backgroundColor: clicked ? "rgba(0,0,0,0.3)" : "transparent",
         }}
-        alt="icon"
+        alt=""
       />
       <p
         className="text-xs text-center font-semibold leading-3 line-clamp-2 text-ellipsis break-words max-w-[96px] py-[2px] px-1 rounded-sm "
@@ -64,7 +80,7 @@ const Folder = (props: Props) => {
       >
         {name}
       </p>
-    </div>
+    </a>
   );
 };
 

@@ -3,7 +3,7 @@ import React from "react";
 const Skills = () => {
   return (
     <div className="px-2 py-4 text-base h-full overflow-y-auto">
-      <p className="text-2xl font-bold">My skills and tools</p>
+      <h1 className="text-2xl font-bold">My skills and tools</h1>
       <br />
       <p>
         I&apos;m a software engineer, so my skills are mostly related to coding,
@@ -20,7 +20,7 @@ const Skills = () => {
           className="w-6 h-6"
           alt="ts"
         />
-        <p className="text-xl font-bold">Typescript</p>
+        <h2 className="text-xl font-bold">Typescript</h2>
       </div>
       <br />
       <p>
@@ -36,7 +36,7 @@ const Skills = () => {
           className="w-6 h-6"
           alt="next"
         />
-        <p className="text-xl font-bold">Next.js</p>
+        <h2 className="text-xl font-bold">Next.js</h2>
       </div>
       <br />
       <p>
@@ -51,7 +51,7 @@ const Skills = () => {
           className="w-6 h-6"
           alt="react"
         />
-        <p className="text-xl font-bold">React.js</p>
+        <h2 className="text-xl font-bold">React.js</h2>
       </div>
       <br />
       <p>
@@ -66,7 +66,7 @@ const Skills = () => {
           className="w-6 h-6"
           alt="rn"
         />
-        <p className="text-xl font-bold">React Native</p>
+        <h2 className="text-xl font-bold">React Native</h2>
       </div>
       <br />
       <p>
@@ -84,7 +84,7 @@ const Skills = () => {
           className="w-6 h-6"
           alt="sol"
         />
-        <p className="text-xl font-bold">Solidity</p>
+        <h2 className="text-xl font-bold">Solidity</h2>
       </div>
       <br />
       <p>
@@ -100,7 +100,7 @@ const Skills = () => {
           className="w-6 h-6"
           alt="cloud"
         />
-        <p className="text-xl font-bold">Cloud providers</p>
+        <h2 className="text-xl font-bold">Cloud providers</h2>
       </div>
       <br />
       <p>
@@ -145,7 +145,7 @@ const Skills = () => {
       <br />
       <div className="flex gap-2 items-center">
         <img src="/svg/coding.svg" className="w-6 h-6" alt="lang" />
-        <p className="text-xl font-bold">Other languages</p>
+        <h2 className="text-xl font-bold">Other languages</h2>
       </div>
       <br />
       <p>
@@ -173,7 +173,7 @@ const Skills = () => {
       <br />
       <div className="flex gap-2 items-center">
         <img src="/svg/languages.svg" className="w-6 h-6" alt="lang2" />
-        <p className="text-xl font-bold">Spoken languages</p>
+        <h2 className="text-xl font-bold">Spoken languages</h2>
       </div>
       <br />
       <p>
@@ -189,7 +189,7 @@ const Skills = () => {
       <br />
       <div className="flex gap-2 items-center">
         <img src="/svg/softskill.svg" className="w-6 h-6" alt="soft" />
-        <p className="text-xl font-bold">Soft skills</p>
+        <h2 className="text-xl font-bold">Soft skills</h2>
       </div>
       <br />
       <p>
@@ -202,7 +202,7 @@ const Skills = () => {
         demonstrated by actually working together.
       </p>
       <br />
-      <p className="text-xl font-bold">Random obvious stuff</p>
+      <h2 className="text-xl font-bold">Random obvious stuff</h2>
       <br />
       <p>
         <strong>Git</strong>

@@ -3,19 +3,19 @@ import React from "react";
 const Calc = () => {
   return (
     <div className="px-2 py-4 text-base h-full overflow-y-auto">
-      <p className="text-2xl font-bold">Calcisticamente Parlando</p>
+      <h1 className="text-2xl font-bold">Calcisticamente Parlando</h1>
       <br />
-      <p className="text-xl font-bold">Short description</p>
+      <h2 className="text-xl font-bold">Short description</h2>
       <p>
         A football app that allowed to listen to the &quot;Calcisticamente
         Parlando Podcast&quot;, watch live Serie A scores, Football player
         ranking and read the &quot;Calcisticamente Parlando Blog&quot;
       </p>
       <br />
-      <p className="text-xl font-bold">Technologies</p>
+      <h2 className="text-xl font-bold">Technologies</h2>
       <p>React Native, Expo, Javascript, Puppeteer for web scraping, AWS</p>
       <br />
-      <p className="text-xl font-bold">The story</p>
+      <h2 className="text-xl font-bold">The story</h2>
       <p>
         In the middle of the <strong>COVID</strong> pandemic (2020/21), I
         graduated with my Bachelor&apos;s degree in computer science. <br />

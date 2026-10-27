@@ -51,8 +51,10 @@ const Finder = (props: Props) => {
 
   return (
     <div
-      className="absolute w-full h-full md:w-1/2 md:h-2/3 shadow-lg"
+      className={`absolute w-full h-full md:w-1/2 md:h-2/3 shadow-lg ${rendered ? "" : "desktop-window-initial"}`}
       style={{
+        "--initial-window-width": "50%",
+        "--initial-window-height": "66.666667%",
         left:
           windowWidth <= 768 || windowWidth / windowHeight <= 0.8
             ? 0
@@ -62,9 +64,8 @@ const Finder = (props: Props) => {
             ? 20
             : position?.y,
         zIndex: stack.indexOf(finderId) + 10,
-        display: rendered ? " block" : "none",
         maxHeight: "calc(100svh - 20px)",
-      }}
+      } as React.CSSProperties}
       ref={ref}
       onClick={() => {
         if (finderId !== stack[stack.length - 1]) {
@@ -180,7 +181,7 @@ const Finder = (props: Props) => {
                 alt="arrow"
               />
             </button>
-            <p className="text-xs">{finderStack[activeFinderIndex]}</p>
+            <h1 className="text-xs">{finderStack[activeFinderIndex]}</h1>
           </div>
           <div className="flex flex-wrap p-4 items-center">
             {(folders[finderStack[activeFinderIndex]]

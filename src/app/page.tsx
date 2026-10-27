@@ -1,5 +1,11 @@
 import WindowsSpace from "./_components/WindowsSpace";
+import StructuredData from "./_components/StructuredData";
 
-export default async function Home() {
-  return <WindowsSpace />;
+export default function Home() {
+  return (
+    <>
+      <StructuredData path="/" />
+      <WindowsSpace />
+    </>
+  );
 }

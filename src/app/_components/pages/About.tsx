@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <div className="px-2 py-4 text-base overflow-y-auto">
-      <p className="text-2xl font-bold">Welcome to my desktop! 🖥️ </p>
+      <h1 className="text-2xl font-bold">Welcome to my desktop! 🖥️ </h1>
       <br />
       <p>
         I&apos;m Lorenzo, a builder at heart. Over the past three years,
@@ -21,7 +21,7 @@ const About = () => {
       </p>
       <br />
       <br />
-      <p className="text-xl font-bold">About this website </p>
+      <h2 className="text-xl font-bold">About this website </h2>
       <br />
       <p>
         This isn&apos;t your typical portfolio. Instead of a static page with a

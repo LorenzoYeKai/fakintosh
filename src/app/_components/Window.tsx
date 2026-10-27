@@ -55,6 +55,8 @@ const Window = (props: Props) => {
   return (
     <div
       style={{
+        "--initial-window-width": defaultWidth,
+        "--initial-window-height": defaultHeight,
         left:
           windowWidth <= 768 || windowWidth / windowHeight <= 0.8
             ? 0
@@ -64,12 +66,11 @@ const Window = (props: Props) => {
             ? 20
             : position?.y,
         zIndex: stack.indexOf(id) + 10,
-        display: rendered ? " block" : "none",
         maxHeight: "calc(100svh - 20px)",
         width: windowWidth <= 768 ? "100%" : defaultWidth,
         height: windowWidth <= 768 ? "100%" : defaultHeight,
-      }}
-      className={`absolute md:text-xs shadow-lg ${className}`}
+      } as React.CSSProperties}
+      className={`absolute md:text-xs shadow-lg ${className} ${rendered ? "" : "desktop-window-initial"}`}
       ref={ref}
       onClick={() => {
         if (id !== stack[stack.length - 1]) {

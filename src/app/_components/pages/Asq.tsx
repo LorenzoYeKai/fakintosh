@@ -3,18 +3,18 @@ import React from "react";
 const Asq = () => {
   return (
     <div className="px-2 py-4 text-base h-full overflow-y-auto">
-      <p className="text-2xl font-bold">Anime Song Quiz</p>
+      <h1 className="text-2xl font-bold">Anime Song Quiz</h1>
       <br />
-      <p className="text-xl font-bold">Short description</p>
+      <h2 className="text-xl font-bold">Short description</h2>
       <p>
         A quiz game where you have to listen to anime songs and guess the title
         of the anime
       </p>
       <br />
-      <p className="text-xl font-bold">Technologies</p>
+      <h2 className="text-xl font-bold">Technologies</h2>
       <p>Kotlin, Android Studio, Firebase</p>
       <br />
-      <p className="text-xl font-bold">The story</p>
+      <h2 className="text-xl font-bold">The story</h2>
       <p>
         My sister and I are <strong>massive anime fans</strong>. We spent a lot
         of our early teenage years watching anime, and{" "}

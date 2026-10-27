@@ -53,6 +53,29 @@ p {
   margin: 0;
 }
 
+h1,
+h2 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Keep the initial content visible and positioned before JavaScript loads. */
+@media (min-width: 769px) {
+  .desktop-window-initial {
+    width: var(--initial-window-width) !important;
+    height: var(--initial-window-height) !important;
+  }
+}
+
+@media (min-width: 769px) and (min-aspect-ratio: 4/5) {
+  .desktop-window-initial {
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
+  }
+}
+
 a {
   color: var(--baseColor);
 }

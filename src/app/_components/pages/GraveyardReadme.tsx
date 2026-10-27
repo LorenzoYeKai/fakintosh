@@ -3,7 +3,7 @@ import React from "react";
 const GraveyardReadme = () => {
   return (
     <div className="px-2 py-4 text-base h-full overflow-y-auto">
-      <p className="text-2xl font-bold">🪦 Welcome to the Graveyard 🪦</p>
+      <h1 className="text-2xl font-bold">🪦 Welcome to the Graveyard 🪦</h1>
       <br />
       <p>
         This is where my past projects rest. Some were bad ideas and some were{" "}

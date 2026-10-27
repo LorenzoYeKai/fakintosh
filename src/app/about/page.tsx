@@ -1,8 +1,16 @@
-import React from "react";
-import About from "../_components/pages/About";
+import { pageMetadata } from "@/lib/seo";
+import StructuredData from "../_components/StructuredData";
+import WindowsSpace from "../_components/WindowsSpace";
+
+export const metadata = pageMetadata("/about");
 
 const page = () => {
-  return <About />;
+  return (
+    <>
+      <StructuredData path="/about" />
+      <WindowsSpace />
+    </>
+  );
 };
 
 export default page;
